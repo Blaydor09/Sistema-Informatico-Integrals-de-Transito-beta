@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SGIIT - Licencias</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="personas.html">Personas</a> |
+    <a href="vehiculos.html">Vehículos</a> |
+    <a href="licencias.html" class="active">Licencias</a> |
+    <a href="incidentes.html">Incidentes</a> |
+    <a href="reportes.html">Reportes</a>
+  </nav>
+
+  <h1>Gestión de Licencias</h1>
+
+  <form id="licencia-form">
+    <input type="hidden" id="licencia_id">
+    <label>
+      Persona:<br>
+      <select id="persona_id" required>
+        <option value="">Cargando...</option>
+      </select>
+    </label>
+    <label>
+      Categoría:<br>
+      <input type="text" id="categoria" required>
+    </label>
+    <label>
+      Fecha Emisión:<br>
+      <input type="date" id="fecha_emision" required>
+    </label>
+    <label>
+      Fecha Vencimiento:<br>
+      <input type="date" id="fecha_vencimiento" required>
+    </label>
+    <label>
+      Estado:<br>
+      <input type="text" id="estado" required>
+    </label>
+    <button type="submit">Guardar</button>
+    <button type="button" id="cancel-btn" hidden>Cancelar</button>
+  </form>
+
+  <table id="licencias-table">
+    <thead>
+      <tr>
+        <th>Persona</th>
+        <th>Categoría</th>
+        <th>Fecha Emisión</th>
+        <th>Fecha Vencimiento</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="js/licencias.js"></script>
+</body>
+</html>

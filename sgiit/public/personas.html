@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SGIIT – Personas</title>
+  <link rel="stylesheet" href="/sgiit/public/css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="personas.html" class="active">Personas</a> |
+    <a href="vehiculos.html">Vehículos</a> |
+    <a href="licencias.html">Licencias</a> |
+    <a href="incidentes.html">Incidentes</a> |
+    <a href="reportes.html">Reportes</a>
+  </nav>
+
+  <h1>Gestión de Personas</h1>
+
+  <form id="persona-form">
+    <input type="hidden" id="persona_id">
+    <label>
+      CI:<br>
+      <input type="text" id="ci" required pattern="\d{6,10}">
+    </label>
+    <label>
+      Nombre:<br>
+      <input type="text" id="nombre" required>
+    </label>
+    <label>
+      Apellidos:<br>
+      <input type="text" id="apellidos" required>
+    </label>
+    <label>
+      Fecha Nac.:<br>
+      <input type="date" id="fecha_nac">
+    </label>
+    <label>
+      Teléfono:<br>
+      <input type="tel" id="telefono">
+    </label>
+    <button type="submit">Guardar</button>
+    <button type="button" id="cancel-btn" hidden>Cancelar</button>
+  </form>
+
+  <table id="personas-table">
+    <thead>
+      <tr>
+        <th>CI</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="js/personas.js"></script>
+</body>
+</html>

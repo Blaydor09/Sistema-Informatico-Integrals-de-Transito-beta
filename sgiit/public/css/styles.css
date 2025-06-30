@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+nav a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+nav a.active {
+  font-weight: bold;
+}
+form {
+  margin-bottom: 20px;
+  display: grid;
+  gap: 8px;
+  max-width: 400px;
+}
+form label {
+  display: block;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+}
+button {
+  padding: 4px 8px;
+  cursor: pointer;
+}

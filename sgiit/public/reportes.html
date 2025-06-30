@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SGIIT – Reportes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="personas.html">Personas</a> |
+    <a href="vehiculos.html">Vehículos</a> |
+    <a href="licencias.html">Licencias</a> |
+    <a href="incidentes.html">Incidentes</a> |
+    <a href="reportes.html" class="active">Reportes</a>
+  </nav>
+
+  <h1>Reportes de Incidentes</h1>
+
+  <form id="reporte-form">
+    <label>
+      Fecha Inicio:<br>
+      <input type="date" id="fechaInicio" required>
+    </label>
+    <label>
+      Fecha Fin:<br>
+      <input type="date" id="fechaFin" required>
+    </label>
+    <label>
+      Tipo (opcional):<br>
+      <input type="text" id="tipo" placeholder="Ej. Accidente, Infracción">
+    </label>
+    <button type="submit">Generar Reporte</button>
+  </form>
+
+  <div id="reporte-result">
+    <!-- Aquí se inyecta la tabla de resumen -->
+  </div>
+
+  <script src="js/reportes.js"></script>
+</body>
+</html>

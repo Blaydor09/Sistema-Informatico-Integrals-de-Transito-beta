@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SGIIT – Incidentes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="personas.html">Personas</a> |
+    <a href="vehiculos.html">Vehículos</a> |
+    <a href="licencias.html">Licencias</a> |
+    <a href="incidentes.html" class="active">Incidentes</a> |
+    <a href="reportes.html">Reportes</a>
+  </nav>
+
+  <h1>Gestión de Incidentes</h1>
+
+  <form id="incidente-form">
+    <input type="hidden" id="incidente_id">
+    <label>
+      Tipo:<br>
+      <input type="text" id="tipo" required>
+    </label>
+    <label>
+      Fecha / Hora:<br>
+      <input type="datetime-local" id="fecha_hora" required>
+    </label>
+    <label>
+      Dirección:<br>
+      <input type="text" id="direccion">
+    </label>
+    <label>
+      Distrito:<br>
+      <select id="distrito_id" required>
+        <option value="">Cargando...</option>
+      </select>
+    </label>
+    <label>
+      Vía:<br>
+      <select id="via_id">
+        <option value="">Cargando...</option>
+      </select>
+    </label>
+    <label>
+      Conductores:<br>
+      <select id="conductores" multiple size="5"></select>
+    </label>
+    <label>
+      Infracciones:<br>
+      <select id="infracciones" multiple size="5"></select>
+    </label>
+    <button type="submit">Guardar</button>
+    <button type="button" id="cancel-btn" hidden>Cancelar</button>
+  </form>
+
+  <table id="incidentes-table">
+    <thead>
+      <tr>
+        <th>Fecha/Hora</th>
+        <th>Tipo</th>
+        <th>Dirección</th>
+        <th>Distrito</th>
+        <th>Vía</th>
+        <th>Conductores</th>
+        <th>Infracciones</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="js/incidentes.js"></script>
+</body>
+</html>

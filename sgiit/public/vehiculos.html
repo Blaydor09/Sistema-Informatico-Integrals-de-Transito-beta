@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SGIIT – Vehículos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="personas.html">Personas</a> |
+    <a href="vehiculos.html" class="active">Vehículos</a> |
+    <a href="licencias.html">Licencias</a> |
+    <a href="incidentes.html">Incidentes</a> |
+    <a href="reportes.html">Reportes</a>
+  </nav>
+
+  <h1>Gestión de Vehículos</h1>
+
+  <form id="vehiculo-form">
+    <input type="hidden" id="vehiculo_id">
+    <label>
+      Placa:<br>
+      <input type="text" id="placa" required pattern="[A-Z0-9\-]{1,10}">
+    </label>
+    <label>
+      Marca:<br>
+      <input type="text" id="marca">
+    </label>
+    <label>
+      Modelo:<br>
+      <input type="text" id="modelo">
+    </label>
+    <label>
+      Año:<br>
+      <input type="number" id="anio" min="1900" max="2099" step="1">
+    </label>
+    <label>
+      Color:<br>
+      <input type="text" id="color">
+    </label>
+    <button type="submit">Guardar</button>
+    <button type="button" id="cancel-btn" hidden>Cancelar</button>
+  </form>
+
+  <table id="vehiculos-table">
+    <thead>
+      <tr>
+        <th>Placa</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>Color</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="js/vehiculos.js"></script>
+</body>
+</html>
